@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/organisms/header/header"
-import LoginRoute from "./loginRoute"
 
 export default class Login extends React.Component {
 
@@ -29,7 +28,7 @@ export default class Login extends React.Component {
                 <div id="contact">
                     <form id="contact-form" onSubmit={this.handleSubmit}>
                         <input type="email" name="email" placeholder="Email" id="email" value={this.state.value} onChange={this.handleChange}></input>
-                        <button type="submit" className="btn btn--primary" onClick={LoginRoute}>Login</button>
+                        <button type="submit" className="btn btn--primary">Login</button>
                     </form>
                 </div>               
             </section>
