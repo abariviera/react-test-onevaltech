@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Header from "../components/organisms/header/header"
+import Link from "next/link";
+import {appendScript} from '../utils/appendScript'
 
 export default class Login extends React.Component {
 
@@ -10,6 +11,10 @@ export default class Login extends React.Component {
     
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);        
+    }
+
+    componentDidMount () {
+        appendScript("../scripts/boxever.js");
     }
 
     handleChange(event) {
@@ -29,12 +34,12 @@ export default class Login extends React.Component {
                 <div id="contact">
                     <form id="contact-form" onSubmit={this.handleSubmit}>
                         <input type="email" name="email" placeholder="Email" id="email" value={this.state.value} onChange={this.handleChange}></input>
-                        <button type="submit" className="btn btn--primary">Login</button>
+                        <Link href="/profile">
+                            <button type="submit" className="btn btn--primary">Login</button>
+                        </Link>                    
                     </form>
                 </div>               
             </section>
         </div>);        
-    }
-    
+    }   
 }
-
