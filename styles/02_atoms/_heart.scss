@@ -1,0 +1,9 @@
+.heart {
+  &-counter {
+    display: flex;
+    align-items: center;
+    span {
+      margin-right: rem(10px);
+    }
+  }
+}

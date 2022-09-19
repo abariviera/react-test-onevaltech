@@ -1,0 +1,20 @@
+body {
+  @extend .section;
+  min-height: 100vh;
+  // min-width: 100%;
+  background-color: $light-grey;
+  font-family: $font-regular;
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    color: $black;
+  }
+}

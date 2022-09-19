@@ -1,0 +1,26 @@
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: rem(10px);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-start: 1;
+    grid-column-end: -1;
+    gap: rem(16px);
+
+    @include breakpoint($desktop){
+      grid-column-start: 2;
+      grid-column-end: -2;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(56px);
+    }
+  }
+
+  
+
+  &__item {
+    
+  }
+}

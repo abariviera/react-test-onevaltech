@@ -1,0 +1,23 @@
+.profile-card {
+  &__image,
+  picture {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: rem(15px);
+
+    &__likes {
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: rem(10px);
+      }
+    }
+  }
+}

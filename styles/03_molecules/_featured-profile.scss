@@ -1,0 +1,115 @@
+.featured-profile {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    padding: 0 0 rem(20px) 0;
+
+    @include breakpoint($desktop) {
+        padding-bottom: rem(110px);
+    }
+
+    &__heading {
+        color: $deep-purple;
+        font-weight: bold;
+        grid-column-start: 2;
+        grid-column-end: -4;
+        margin-top: rem(20px);
+    }
+
+    img {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: cover;
+
+        @include breakpoint($desktop) {
+            grid-column-start: 2;
+            grid-column-end: 6;
+            border-radius: rem(5px);
+        }
+    }
+
+    &__info {
+        grid-column-start: 1;
+        grid-column-end: -1;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        align-items: center;
+        margin: rem(15px) 0 rem(10px) 0;
+
+        @include breakpoint($desktop) {
+            grid-column-start: 7;
+            grid-column-end: -2;
+            align-content: center;
+        }
+    }
+
+    &__user {
+        color: $happy-blue;
+        font-weight: bold;
+        grid-column-start: 2;
+        grid-column-end: 9;
+        margin: 0;
+
+        @include breakpoint($desktop) {
+            grid-column-start: 1;
+        }
+    }
+
+    &__praiseArea{
+        grid-column-start: 9;
+        grid-column-end: -2;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        flex-direction: row;
+
+        @include breakpoint($desktop) {
+            grid-column-end: -1;
+        }
+    }
+
+    &__praiseCounter {
+        margin: 0 4px 0 0;
+    }
+
+    
+
+    &__comment {
+        grid-column-start: 3;
+        grid-column-end: -2;
+        text-align: right;
+        margin-top: rem(20px);
+
+        &::before, &::after {
+            content: "\""
+        }
+
+        @include breakpoint($desktop) {
+            grid-column-start: 1;
+            grid-column-end: -1;
+        }
+    }
+
+    &__commentAuthor {
+        grid-column-start: 3;
+        grid-column-end: -2;
+        text-align: right;
+        color: $faded-gray;
+
+        @include breakpoint($desktop) {
+            grid-column-end: -1;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        justify-content: center;
+        gap: rem(4px);
+        color: $medium-grey;
+        margin-top: rem(12px);
+    }
+}

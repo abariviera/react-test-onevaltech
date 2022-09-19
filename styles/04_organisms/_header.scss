@@ -1,0 +1,56 @@
+.header {
+  @extend .section;
+  height: rem(50px);
+  display: flex;
+  justify-content: space-between;
+
+  .heart-icon {
+    width: rem(30px);
+    height: rem(30px);
+  }
+
+  &__menu {
+    display: none;
+
+    li {
+      font-size: rem(20px);
+      padding: rem(10px);
+    }
+
+    @include breakpoint($desktop) {
+      display: flex;
+    }
+  }
+
+  .raise-hand {
+    display: none;
+
+    @include breakpoint($desktop) {
+      display: inline-block;
+    }
+  }
+
+  .box-shadow-menu {
+    position: relative;
+    padding-left: 1.25em;
+    display: inline-block;
+
+    @include breakpoint($desktop) {
+      display: none;
+    }
+  }
+  .box-shadow-menu:before {
+    margin-top: rem(5px);
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 20px;
+    height: 2px;
+    background: black;
+    box-shadow: 
+      0 8px 0 0 black,
+      0 16px 0 0 black;
+  }
+}
+
