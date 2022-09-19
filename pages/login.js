@@ -21,8 +21,27 @@ export default class Login extends React.Component {
         this.setState({value: event.target.value});
       }
 
-    handleSubmit(event) {
-        console.log(event.target[0].value);        
+    handleSubmit(event) {    
+        var email = this.state.value;
+        console.log(email);  
+        _boxeverq.push(function() {
+            var identityEvent = {
+              channel: "WEB",
+              type: "IDENTITY",
+              language: "EN",
+              currency: "USD",
+              page: "login",
+              pos: "CapybaraHackathon",
+              browser_id: Boxever.getID(),
+              identifiers: [{
+                provider: "Capybara",
+               id: "123456"
+              }],
+              email: email
+            };
+            
+            Boxever.eventCreate(identityEvent, function(data) {}, "json");
+        });
         event.preventDefault();
     }
 
@@ -34,12 +53,15 @@ export default class Login extends React.Component {
                 <div id="contact">
                     <form id="contact-form" onSubmit={this.handleSubmit}>
                         <input type="email" name="email" placeholder="Email" id="email" value={this.state.value} onChange={this.handleChange}></input>
-                        <Link href="/profile">
-                            <button type="submit" className="btn btn--primary">Login</button>
-                        </Link>                    
+                        <button type="submit" className="btn btn--primary" onClick={this.handleSubmit}> 
+                            <Link href="/profile">
+                                Login
+                            </Link>
+                        </button>                                        
                     </form>
                 </div>               
             </section>
         </div>);        
-    }   
+    }    
 }
+
