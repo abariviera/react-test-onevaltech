@@ -14,17 +14,3 @@ var _boxever_settings = {
         var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
 })();
 
-_boxeverq.push(function() {
-    var viewEvent = {
-      channel: "WEB",
-      type: "VIEW",
-      language: "EN",
-      currency: "USD",
-      page: "login",
-      pos: "CapybaraHackathon",
-      browser_id: Boxever.getID()
-    };
-    
-    Boxever.eventCreate(viewEvent, function(data) {}, "json");
-  });
-
