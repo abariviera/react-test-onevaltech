@@ -15,6 +15,20 @@ export default class Login extends React.Component {
 
     componentDidMount () {
         appendScript("../scripts/boxever.js");
+        
+        _boxeverq.push(function() {
+            var viewEvent = {
+              channel: "WEB",
+              type: "VIEW",
+              language: "EN",
+              currency: "USD",
+              page: "login",
+              pos: "CapybaraHackathon",
+              browser_id: Boxever.getID()
+            };
+    
+            Boxever.eventCreate(viewEvent, function(data) {}, "json");
+        });
     }
 
     handleChange(event) {
