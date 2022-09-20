@@ -14,8 +14,10 @@ export default class Login extends React.Component {
     }
 
     componentDidMount () {
-        appendScript("../scripts/boxever.js");
-        
+        appendScript("../scripts/boxever.js");       
+    }
+
+    componentDidUpdate() {
         _boxeverq.push(function() {
             var viewEvent = {
               channel: "WEB",
@@ -30,7 +32,7 @@ export default class Login extends React.Component {
             Boxever.eventCreate(viewEvent, function(data) {}, "json");
         });
     }
-
+    
     handleChange(event) {
         this.setState({value: event.target.value});
       }
