@@ -9,7 +9,7 @@ const Header = () => {
 
             <ul className="header__menu">
                 <li>
-                    <Link href="/">My Profile</Link>
+                    <Link href="/">Login</Link>
                 </li>
                 <li>
                     <a>Account</a>

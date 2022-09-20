@@ -4,9 +4,9 @@ export default function Help() {
     return (
         <div>
             <Header/>
-            <section className="help">
-                <h2 className="help__heading">ASK US A QUESTION</h2>
-                <form className="help__form" action="/send-data-here" method="post">
+            <section className="form">
+                <h2 className="form__heading">ASK US A QUESTION</h2>
+                <form className="form__content" action="/send-data-here" method="post">
                     <label for="topic">Topic</label>
                     <input type="text" id="topic" name="topic" />
 
