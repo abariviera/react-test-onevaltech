@@ -13,6 +13,8 @@ const ProfileHeading = (props) => {
                     return <li className="featured-profile__item" key={index}>{item}</li>
                 })}
             </ul>
+
+            <div class="style-49108baf-ee61-4470-bb6b-e602a7efecd5"></div>
         </section>
     )
 }
