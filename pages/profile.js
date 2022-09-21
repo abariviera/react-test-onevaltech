@@ -83,7 +83,7 @@ export default class Profile extends React.Component {
     return  (<div>
       <Header/>
       <ProfileHeading
-          user="Ana Barivieira"
+          user="Ana Bariviera"
           image="/images/profile-5.jpeg"
           alt="Ana"
           counter="37"
