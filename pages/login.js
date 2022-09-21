@@ -70,9 +70,7 @@ export default class Login extends React.Component {
                     <form id="contact-form" onSubmit={this.handleSubmit} className="form__content">
                         <input type="email" name="email" placeholder="Email" id="email" value={this.state.value} onChange={this.handleChange}></input>
                         <button type="submit" className="btn btn--primary" onClick={this.handleSubmit}> 
-                            <Link href="/profile">
-                                Login
-                            </Link>
+                            <Link href="/profile">Login</Link>                
                         </button>                                        
                     </form>
                 </div>               
