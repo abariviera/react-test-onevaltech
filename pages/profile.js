@@ -48,7 +48,21 @@ export default class Profile extends React.Component {
     this.btn.addEventListener("click", this.onButtonClick);     
   }
 
-  onButtonClick() {        
+  onButtonClick() {  
+    _boxeverq.push(function() {
+      var viewEvent = {
+        channel: "WEB",
+        type: "VIEW",
+        language: "EN",
+        currency: "USD",
+        page: "profile",
+        pos: "CapybaraHackathon",
+        browser_id: Boxever.getID()
+      };
+
+      Boxever.eventCreate(viewEvent, function(data) {}, "json");
+    });
+    
     _boxeverq.push(function() {
       var customEvent = {
         channel: "WEB",
